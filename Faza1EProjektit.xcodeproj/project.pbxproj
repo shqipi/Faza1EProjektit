@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		0424737A29BA7E6D00B3FD13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424737929BA7E6D00B3FD13 /* AppDelegate.swift */; };
 		0424737C29BA7E6D00B3FD13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424737B29BA7E6D00B3FD13 /* SceneDelegate.swift */; };
-		0424737E29BA7E6D00B3FD13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424737D29BA7E6D00B3FD13 /* ViewController.swift */; };
+		0424737E29BA7E6D00B3FD13 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424737D29BA7E6D00B3FD13 /* LoginViewController.swift */; };
 		0424738129BA7E6D00B3FD13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0424737F29BA7E6D00B3FD13 /* Main.storyboard */; };
 		0424738329BA7E6E00B3FD13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0424738229BA7E6E00B3FD13 /* Assets.xcassets */; };
 		0424738629BA7E6E00B3FD13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0424738429BA7E6E00B3FD13 /* LaunchScreen.storyboard */; };
+		0424739129BA927A00B3FD13 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424739029BA927A00B3FD13 /* User.swift */; };
+		0424739329BA96BF00B3FD13 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424739229BA96BF00B3FD13 /* HomeViewController.swift */; };
+		0424739529BA999200B3FD13 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424739429BA999200B3FD13 /* ForgotPasswordViewController.swift */; };
+		0424739729BA99A600B3FD13 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424739629BA99A600B3FD13 /* SignUpViewController.swift */; };
+		04DCC82629BE18BB00DCD669 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCC82529BE18BB00DCD669 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0424737629BA7E6D00B3FD13 /* Faza1EProjektit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Faza1EProjektit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0424737929BA7E6D00B3FD13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0424737B29BA7E6D00B3FD13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0424737D29BA7E6D00B3FD13 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0424737D29BA7E6D00B3FD13 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0424738029BA7E6D00B3FD13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0424738229BA7E6E00B3FD13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0424738529BA7E6E00B3FD13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0424738729BA7E6E00B3FD13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0424739029BA927A00B3FD13 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0424739229BA96BF00B3FD13 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0424739429BA999200B3FD13 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		0424739629BA99A600B3FD13 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		04DCC82529BE18BB00DCD669 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +68,42 @@
 			children = (
 				0424737929BA7E6D00B3FD13 /* AppDelegate.swift */,
 				0424737B29BA7E6D00B3FD13 /* SceneDelegate.swift */,
-				0424737D29BA7E6D00B3FD13 /* ViewController.swift */,
-				0424737F29BA7E6D00B3FD13 /* Main.storyboard */,
+				0424738F29BA925000B3FD13 /* Model */,
+				0424738D29BA922E00B3FD13 /* View */,
+				0424738E29BA923F00B3FD13 /* Controller */,
 				0424738229BA7E6E00B3FD13 /* Assets.xcassets */,
-				0424738429BA7E6E00B3FD13 /* LaunchScreen.storyboard */,
 				0424738729BA7E6E00B3FD13 /* Info.plist */,
 			);
 			path = Faza1EProjektit;
+			sourceTree = "<group>";
+		};
+		0424738D29BA922E00B3FD13 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0424737F29BA7E6D00B3FD13 /* Main.storyboard */,
+				0424738429BA7E6E00B3FD13 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0424738E29BA923F00B3FD13 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0424737D29BA7E6D00B3FD13 /* LoginViewController.swift */,
+				0424739229BA96BF00B3FD13 /* HomeViewController.swift */,
+				0424739429BA999200B3FD13 /* ForgotPasswordViewController.swift */,
+				0424739629BA99A600B3FD13 /* SignUpViewController.swift */,
+				04DCC82529BE18BB00DCD669 /* ProfileViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0424738F29BA925000B3FD13 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0424739029BA927A00B3FD13 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +177,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0424737E29BA7E6D00B3FD13 /* ViewController.swift in Sources */,
+				0424739329BA96BF00B3FD13 /* HomeViewController.swift in Sources */,
+				0424739729BA99A600B3FD13 /* SignUpViewController.swift in Sources */,
+				0424739129BA927A00B3FD13 /* User.swift in Sources */,
+				0424739529BA999200B3FD13 /* ForgotPasswordViewController.swift in Sources */,
+				0424737E29BA7E6D00B3FD13 /* LoginViewController.swift in Sources */,
 				0424737A29BA7E6D00B3FD13 /* AppDelegate.swift in Sources */,
+				04DCC82629BE18BB00DCD669 /* ProfileViewController.swift in Sources */,
 				0424737C29BA7E6D00B3FD13 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +339,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,6 +368,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

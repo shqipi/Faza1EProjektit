@@ -9,8 +9,14 @@ import UIKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
+    
+    
+    @IBOutlet weak var userNameWarningLabel: UILabel!
+    @IBOutlet weak var passwordWarningLabel: UILabel!
+    
     var user: User?
     var isClicked = true
+    var loginViewBrain = LoginViewBrain()
     
     
     @IBOutlet weak var usernameTextField: UITextField!
@@ -27,10 +33,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         usernameTextField.delegate = self
         passwordTextField.delegate = self
         
-        makeChanges(input: backgroundView)
-        makeChanges(input: loginButton)
-        txtFieldShadow(input: usernameTextField)
-        txtFieldShadow(input: passwordTextField)
+        loginViewBrain.makeChanges(backgroundView)
+        loginViewBrain.makeChanges(loginButton)
+        loginViewBrain.txtFieldShadow(usernameTextField)
+        loginViewBrain.txtFieldShadow(passwordTextField)
     }
     
     @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue){
@@ -48,22 +54,27 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
-       performSegue(withIdentifier: "go2Home", sender: self)
+        
+        guard let username = usernameTextField.text, let password = passwordTextField.text else {
+            return
+        }
+        if username != "" && password != ""{
+            performSegue(withIdentifier: "go2Home", sender: self)
+            userNameWarningLabel.isHidden = true
+            passwordWarningLabel.isHidden = true
+        }else {
+            userNameWarningLabel.isHidden = false
+            userNameWarningLabel.text = "UserName is empty"
+            passwordWarningLabel.isHidden = false
+            passwordWarningLabel.text = "Password is empty"
+
+            return
+        }
+        
     }
     
     
-    func makeChanges(input: AnyObject) {
-        input.layer?.cornerRadius = 10
-        input.layer?.borderColor = UIColor.black.cgColor
-        input.layer?.borderWidth = 2
-        input.layer?.shadowRadius = 10
-        input.layer?.shadowOpacity = 0.2
-    }
     
-    func txtFieldShadow(input: UITextField) {
-        input.layer.shadowRadius = 10
-        input.layer.shadowOpacity = 0.2
-    }
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         if textField.text != ""{

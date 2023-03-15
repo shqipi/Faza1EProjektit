@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0413A2BA29C249F200034E44 /* LoginViewBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0413A2B929C249F200034E44 /* LoginViewBrain.swift */; };
+		0413A2BC29C24AD600034E44 /* HomeViewBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0413A2BB29C24AD600034E44 /* HomeViewBrain.swift */; };
+		0413A2BE29C24B9C00034E44 /* ForgotPassViewBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0413A2BD29C24B9C00034E44 /* ForgotPassViewBrain.swift */; };
+		0413A2C029C24C7500034E44 /* SignUpViewBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0413A2BF29C24C7500034E44 /* SignUpViewBrain.swift */; };
+		0413A2C229C24D6700034E44 /* ProfileViewBrian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0413A2C129C24D6700034E44 /* ProfileViewBrian.swift */; };
 		0424737A29BA7E6D00B3FD13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424737929BA7E6D00B3FD13 /* AppDelegate.swift */; };
 		0424737C29BA7E6D00B3FD13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424737B29BA7E6D00B3FD13 /* SceneDelegate.swift */; };
 		0424737E29BA7E6D00B3FD13 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424737D29BA7E6D00B3FD13 /* LoginViewController.swift */; };
@@ -21,6 +26,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0413A2B929C249F200034E44 /* LoginViewBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewBrain.swift; sourceTree = "<group>"; };
+		0413A2BB29C24AD600034E44 /* HomeViewBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewBrain.swift; sourceTree = "<group>"; };
+		0413A2BD29C24B9C00034E44 /* ForgotPassViewBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassViewBrain.swift; sourceTree = "<group>"; };
+		0413A2BF29C24C7500034E44 /* SignUpViewBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewBrain.swift; sourceTree = "<group>"; };
+		0413A2C129C24D6700034E44 /* ProfileViewBrian.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewBrian.swift; sourceTree = "<group>"; };
 		0424737629BA7E6D00B3FD13 /* Faza1EProjektit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Faza1EProjektit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0424737929BA7E6D00B3FD13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0424737B29BA7E6D00B3FD13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +112,11 @@
 			isa = PBXGroup;
 			children = (
 				0424739029BA927A00B3FD13 /* User.swift */,
+				0413A2B929C249F200034E44 /* LoginViewBrain.swift */,
+				0413A2BB29C24AD600034E44 /* HomeViewBrain.swift */,
+				0413A2BD29C24B9C00034E44 /* ForgotPassViewBrain.swift */,
+				0413A2BF29C24C7500034E44 /* SignUpViewBrain.swift */,
+				0413A2C129C24D6700034E44 /* ProfileViewBrian.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -177,12 +192,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0413A2BE29C24B9C00034E44 /* ForgotPassViewBrain.swift in Sources */,
 				0424739329BA96BF00B3FD13 /* HomeViewController.swift in Sources */,
 				0424739729BA99A600B3FD13 /* SignUpViewController.swift in Sources */,
+				0413A2BC29C24AD600034E44 /* HomeViewBrain.swift in Sources */,
 				0424739129BA927A00B3FD13 /* User.swift in Sources */,
+				0413A2C029C24C7500034E44 /* SignUpViewBrain.swift in Sources */,
 				0424739529BA999200B3FD13 /* ForgotPasswordViewController.swift in Sources */,
 				0424737E29BA7E6D00B3FD13 /* LoginViewController.swift in Sources */,
+				0413A2C229C24D6700034E44 /* ProfileViewBrian.swift in Sources */,
 				0424737A29BA7E6D00B3FD13 /* AppDelegate.swift in Sources */,
+				0413A2BA29C249F200034E44 /* LoginViewBrain.swift in Sources */,
 				04DCC82629BE18BB00DCD669 /* ProfileViewController.swift in Sources */,
 				0424737C29BA7E6D00B3FD13 /* SceneDelegate.swift in Sources */,
 			);

@@ -21,6 +21,9 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var mainPic: UIImageView!
     
+    
+    var profileViewBrain = ProfileViewBrian()
+    
     var firstLabel: String = ""
     var name: String = ""
     var userName: String = ""
@@ -37,18 +40,10 @@ class ProfileViewController: UIViewController {
         cityLabel.text = city
         countyrLabel.text = country
         topLabel.text = firstLabel
-        changeButtons(startRecButton)
-        changeButtons(connToOtherButton)
-        addBorder(connToOtherButton)
+        profileViewBrain.changeButtons(startRecButton)
+        profileViewBrain.changeButtons(connToOtherButton)
+        profileViewBrain.addBorder(connToOtherButton)
     }
     
-    func changeButtons(_ input: UIButton){
-        input.layer.cornerRadius = 15
-    }
     
-    func addBorder(_ input: UIButton){
-        input.layer.borderWidth = 2
-        input.layer.borderColor = UIColor.systemBlue.cgColor
-    }
-
 }

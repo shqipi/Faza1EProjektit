@@ -16,7 +16,15 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var newPassTextField: UITextField!
     @IBOutlet weak var reTypePassTextField: UITextField!
+    
+    @IBOutlet weak var userNameWarningLabel: UILabel!
+    @IBOutlet weak var passwordWarningLabel: UILabel!
+    @IBOutlet weak var reTypePassWarningLabel: UILabel!
+    
+    
     @IBOutlet weak var changeButton: UIButton!
+    
+    var forgotPassViewBrain = ForgotPassViewBrain()
     
     
     override func viewDidLoad() {
@@ -27,14 +35,14 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
         reTypePassTextField.delegate = self
         
         
-        changeCornerRad(mainView)
-        changeCornerRad(changeButton)
-        addShadow(mainView)
-        addShadow(mainTitleLabel)
-        addShadow(userNameTextField)
-        addShadow(newPassTextField)
-        addShadow(reTypePassTextField)
-        addColorAndWidthToBorder(changeButton)
+        forgotPassViewBrain.changeCornerRad(mainView)
+        forgotPassViewBrain.changeCornerRad(changeButton)
+        forgotPassViewBrain.addShadow(mainView)
+        forgotPassViewBrain.addShadow(mainTitleLabel)
+        forgotPassViewBrain.addShadow(userNameTextField)
+        forgotPassViewBrain.addShadow(newPassTextField)
+        forgotPassViewBrain.addShadow(reTypePassTextField)
+        forgotPassViewBrain.addColorAndWidthToBorder(changeButton)
     }
     
     
@@ -58,40 +66,33 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-
+    
     @IBAction func changeButtonPressed(_ sender: UIButton) {
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        if let goToProfileViewController = storyBoard.instantiateViewController(withIdentifier: "ProfileViewController") as? ProfileViewController {
-            goToProfileViewController.firstLabel = "Changed succsessfully"
-            self.navigationController?.pushViewController(goToProfileViewController, animated: true)
+        
+        guard let name = userNameTextField.text, let password = newPassTextField.text, let retPassword = reTypePassTextField.text else {
+            return
         }
-    }
-    
-    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        if textField.text != ""{
-            return true
-        }else{
-            textField.placeholder = "Please type something"
-            return false
+        
+        if name != "" && password != "" && retPassword != "" {
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            if let goToProfileViewController = storyBoard.instantiateViewController(withIdentifier: "ProfileViewController") as? ProfileViewController {
+                goToProfileViewController.firstLabel = "Changed succsessfully"
+                self.navigationController?.pushViewController(goToProfileViewController, animated: true)
+            }
+            userNameWarningLabel.isHidden = true
+            passwordWarningLabel.isHidden = true
+            reTypePassWarningLabel.isHidden = true
+        }else {
+            userNameWarningLabel.isHidden = false
+            userNameWarningLabel.text = "User name is empty"
+            
+            passwordWarningLabel.isHidden = false
+            passwordWarningLabel.text = "Password is empty"
+            
+            reTypePassWarningLabel.isHidden = false
+            reTypePassWarningLabel.text = "Re-Type password is empty"
         }
-    }
-    
-    func changeCornerRad(_ input: AnyObject) {
-        input.layer?.cornerRadius = 8
-    }
-    
-    func addShadow(_ input: AnyObject){
-        input.layer?.shadowRadius = 1
-        input.layer?.shadowOpacity = 0.1
-        input.layer?.shadowOffset = CGSize(width: 0, height: 3)
-        input.layer?.shadowColor = UIColor.darkGray.cgColor
-        input.layer?.cornerRadius = 15
         
     }
     
-    func addColorAndWidthToBorder(_ input: AnyObject){
-        input.layer?.borderWidth = 2
-        input.layer?.borderColor = UIColor.black.cgColor
-    }
-
 }

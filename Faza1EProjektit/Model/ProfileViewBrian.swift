@@ -11,7 +11,7 @@ struct ProfileViewBrian {
     
     
     
-    func changeButtons(_ input: UIButton){
+    func changeButtons(_ input: AnyObject){
         input.layer.cornerRadius = 15
     }
     

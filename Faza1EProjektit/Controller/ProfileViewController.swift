@@ -19,6 +19,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var startRecButton: UIButton!
     @IBOutlet weak var connToOtherButton: UIButton!
     
+    @IBOutlet weak var picBackgroundView: UIView!
     @IBOutlet weak var mainPic: UIImageView!
     
     
@@ -42,6 +43,8 @@ class ProfileViewController: UIViewController {
         topLabel.text = firstLabel
         profileViewBrain.changeButtons(startRecButton)
         profileViewBrain.changeButtons(connToOtherButton)
+        profileViewBrain.changeButtons(mainPic)
+        profileViewBrain.changeButtons(picBackgroundView)
         profileViewBrain.addBorder(connToOtherButton)
     }
     

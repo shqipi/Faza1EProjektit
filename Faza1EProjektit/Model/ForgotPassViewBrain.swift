@@ -29,7 +29,7 @@ struct ForgotPassViewBrain {
         input.layer?.shadowOpacity = 0.1
         input.layer?.shadowOffset = CGSize(width: 0, height: 3)
         input.layer?.shadowColor = UIColor.darkGray.cgColor
-        input.layer?.cornerRadius = 15
+        input.layer?.cornerRadius = 10
         
     }
     

@@ -9,8 +9,6 @@ import UIKit
 
 struct ProfileViewBrian {
     
-    
-    
     func changeButtons(_ input: AnyObject){
         input.layer.cornerRadius = 15
     }

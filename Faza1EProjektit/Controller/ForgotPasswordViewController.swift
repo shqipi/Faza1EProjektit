@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
+class ForgotPasswordViewController: UIViewController {
     
     var isClicked = true
     
@@ -16,12 +16,9 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var newPassTextField: UITextField!
     @IBOutlet weak var reTypePassTextField: UITextField!
-    
     @IBOutlet weak var userNameWarningLabel: UILabel!
     @IBOutlet weak var passwordWarningLabel: UILabel!
     @IBOutlet weak var reTypePassWarningLabel: UILabel!
-    
-    
     @IBOutlet weak var changeButton: UIButton!
     
     var forgotPassViewBrain = ForgotPassViewBrain()
@@ -33,8 +30,6 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
         userNameTextField.delegate = self
         newPassTextField.delegate = self
         reTypePassTextField.delegate = self
-        
-        
         forgotPassViewBrain.changeCornerRad(mainView)
         forgotPassViewBrain.changeCornerRad(changeButton)
         forgotPassViewBrain.addShadow(mainView)
@@ -73,7 +68,7 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        if name != "" && password != "" && retPassword != "" {
+        if name != "", password != "", retPassword != "" {
             let storyBoard = UIStoryboard(name: "Main", bundle: nil)
             if let goToProfileViewController = storyBoard.instantiateViewController(withIdentifier: "ProfileViewController") as? ProfileViewController {
                 goToProfileViewController.firstLabel = "Changed succsessfully"
@@ -85,14 +80,23 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
         }else {
             userNameWarningLabel.isHidden = false
             userNameWarningLabel.text = "User name is empty"
-            
             passwordWarningLabel.isHidden = false
             passwordWarningLabel.text = "Password is empty"
-            
             reTypePassWarningLabel.isHidden = false
             reTypePassWarningLabel.text = "Re-Type password is empty"
         }
-        
     }
-    
+}
+
+//MARK: -  UITextFieldDelegate
+
+extension ForgotPasswordViewController: UITextFieldDelegate {
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        if textField.text != ""{
+            return true
+        }else{
+            textField.placeholder = "Please type something"
+            return false
+        }
+    }
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController, UITextFieldDelegate {
+class SignUpViewController: UIViewController {
     
     var user: User?
     var isClicked = true
@@ -38,6 +38,13 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        fullNameTextField.delegate = self
+        userNameTextField.delegate = self
+        passwordTextField.delegate = self
+        reTypePassTextField.delegate = self
+        cityTextField.delegate = self
+        countryTextField.delegate = self
+        ageTextField.delegate = self
         signUpViewBrain.changeBorder(mainViewField)
         signUpViewBrain.buttonChange(signInButton)
         changeArrayViews()
@@ -66,13 +73,12 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         guard let user = userNameTextField.text, let name = userNameTextField.text, let password = passwordTextField.text, let reTypePass = reTypePassTextField.text ,let city = cityTextField.text, let country = countryTextField.text, let age = ageTextField.text else {
             return
         }
-        
-        if user != "" && name != "" && password != "" && reTypePass != "" && city != "" && country != "" && age != ""{
+        if user != "", name != "", password != "", reTypePass != "", city != "", country != "", age != ""{
             let storyBoard = UIStoryboard(name: "Main", bundle: nil)
             if let profileViewController = storyBoard.instantiateViewController(withIdentifier: "ProfileViewController") as? ProfileViewController {
-                let userObj = User(userName: (userNameTextField.text ?? "hello"), fullName: (userNameTextField.text ?? "hello"), city: (cityTextField.text ?? "hello"), country: (countryTextField.text ?? "hello"), age: Int (ageTextField.text ?? "0"))
+                let userObj = User(userName: (userNameTextField.text ?? "hello"), fullName: (userNameTextField.text ?? "hello"), city: (cityTextField.text ?? "hello"), country: (countryTextField.text ?? "hello"), age: Int (ageTextField.text ?? "0"), id: 1)
                 profileViewController.name = userObj.fullName ?? "Hello"
-                profileViewController.userName = userObj.userName
+                profileViewController.userName = userObj.userName ?? "Shqiperim"
                 profileViewController.city = userObj.city ?? "Ferizaj"
                 profileViewController.country = userObj.country ?? "Kosova"
                 profileViewController.age = String(Int(userObj.age ?? 0))
@@ -86,7 +92,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                 cityWarningLabel.isHidden = true
                 countryWarningLabel.isHidden = true
                 ageWarningLabel.isHidden = true
-                
             }
         }else{
             
@@ -112,6 +117,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             ageWarningLabel.text = "Age is empty"
             
         }
+        
     }
     
     func changeArrayViews(){
@@ -121,4 +127,17 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+}
+
+//MARK: - UITextFieldDelegate
+
+extension SignUpViewController: UITextFieldDelegate {
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        if textField.text != "" {
+            return true
+        }else {
+            textField.placeholder = "Please type something"
+            return false
+        }
+    }
 }

@@ -7,9 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
-    
-    
+class LoginViewController: UIViewController {
     
     @IBOutlet weak var userNameWarningLabel: UILabel!
     @IBOutlet weak var passwordWarningLabel: UILabel!
@@ -32,7 +30,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         usernameTextField.delegate = self
         passwordTextField.delegate = self
-        
         loginViewBrain.makeChanges(backgroundView)
         loginViewBrain.makeChanges(loginButton)
         loginViewBrain.txtFieldShadow(usernameTextField)
@@ -42,7 +39,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue){
         
     }
-    
     
     @IBAction func eyeButtonPressed(_ sender: UIButton) {
         if isClicked {
@@ -54,11 +50,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
-        
         guard let username = usernameTextField.text, let password = passwordTextField.text else {
             return
         }
-        if username != "" && password != ""{
+        if username != "", password != ""{
             performSegue(withIdentifier: "go2Home", sender: self)
             userNameWarningLabel.isHidden = true
             passwordWarningLabel.isHidden = true
@@ -67,14 +62,22 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             userNameWarningLabel.text = "UserName is empty"
             passwordWarningLabel.isHidden = false
             passwordWarningLabel.text = "Password is empty"
-
             return
         }
-        
     }
     
-    
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "go2Home" {
+            if let homeViewController = segue.destination as? HomeViewController{
+                let user = User(userName: usernameTextField.text ?? "Feed", id: 1)
+                homeViewController.showUsername = user.userName ?? "Shqiperim"
+            }
+        }
+    }
+}
+
+//MARK: - UITextFieldDelegate
+extension LoginViewController: UITextFieldDelegate {
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         if textField.text != ""{
@@ -84,15 +87,5 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             return false
         }
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "go2Home" {
-            if let homeViewController = segue.destination as? HomeViewController{
-                let user = User(userName: usernameTextField.text ?? "Feed")
-                homeViewController.showUsername = user.userName
-            }
-        }
-    }
-
 }
 

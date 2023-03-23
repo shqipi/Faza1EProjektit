@@ -35,6 +35,10 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpProfileView()
+    }
+    
+    func setUpProfileView() {
         fullNameLabel.text = name
         userNameLabel.text = userName
         ageLabel.text = age
@@ -47,6 +51,4 @@ class ProfileViewController: UIViewController {
         profileViewBrain.changeButtons(picBackgroundView)
         profileViewBrain.addBorder(connToOtherButton)
     }
-    
-    
 }

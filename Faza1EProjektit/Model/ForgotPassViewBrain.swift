@@ -9,17 +9,6 @@ import UIKit
 
 struct ForgotPassViewBrain {
     
-    
-    
-    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        if textField.text != ""{
-            return true
-        }else{
-            textField.placeholder = "Please type something"
-            return false
-        }
-    }
-    
     func changeCornerRad(_ input: AnyObject) {
         input.layer?.cornerRadius = 8
     }
@@ -30,7 +19,6 @@ struct ForgotPassViewBrain {
         input.layer?.shadowOffset = CGSize(width: 0, height: 3)
         input.layer?.shadowColor = UIColor.darkGray.cgColor
         input.layer?.cornerRadius = 10
-        
     }
     
     func addColorAndWidthToBorder(_ input: AnyObject){

@@ -10,7 +10,6 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var firstPic: UIImageView!
     @IBOutlet weak var largFirstPic: UIImageView!
@@ -20,7 +19,6 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var miniSecondPic: UIImageView!
     
     var showUsername: String = "Hello"
-    
     var homeViewBrain = HomeViewBrain()
     
     override func viewDidLoad() {

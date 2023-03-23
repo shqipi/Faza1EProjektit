@@ -22,6 +22,9 @@
 		0424739329BA96BF00B3FD13 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424739229BA96BF00B3FD13 /* HomeViewController.swift */; };
 		0424739529BA999200B3FD13 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424739429BA999200B3FD13 /* ForgotPasswordViewController.swift */; };
 		0424739729BA99A600B3FD13 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424739629BA99A600B3FD13 /* SignUpViewController.swift */; };
+		042D439729CBA7EF000C3024 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D439529CBA7EF000C3024 /* UserCell.swift */; };
+		042D439829CBA7EF000C3024 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042D439629CBA7EF000C3024 /* UserCell.xib */; };
+		042D439A29CBBAA9000C3024 /* NewProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D439929CBBAA9000C3024 /* NewProfileViewController.swift */; };
 		04DCC82629BE18BB00DCD669 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCC82529BE18BB00DCD669 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +46,9 @@
 		0424739229BA96BF00B3FD13 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0424739429BA999200B3FD13 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		0424739629BA99A600B3FD13 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		042D439529CBA7EF000C3024 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		042D439629CBA7EF000C3024 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		042D439929CBBAA9000C3024 /* NewProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProfileViewController.swift; sourceTree = "<group>"; };
 		04DCC82529BE18BB00DCD669 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +96,7 @@
 		0424738D29BA922E00B3FD13 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				042D439429CBA7A9000C3024 /* Cell */,
 				0424737F29BA7E6D00B3FD13 /* Main.storyboard */,
 				0424738429BA7E6E00B3FD13 /* LaunchScreen.storyboard */,
 			);
@@ -117,8 +124,18 @@
 				0413A2BD29C24B9C00034E44 /* ForgotPassViewBrain.swift */,
 				0413A2BF29C24C7500034E44 /* SignUpViewBrain.swift */,
 				0413A2C129C24D6700034E44 /* ProfileViewBrian.swift */,
+				042D439929CBBAA9000C3024 /* NewProfileViewController.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		042D439429CBA7A9000C3024 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				042D439529CBA7EF000C3024 /* UserCell.swift */,
+				042D439629CBA7EF000C3024 /* UserCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +196,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				042D439829CBA7EF000C3024 /* UserCell.xib in Resources */,
 				0424738629BA7E6E00B3FD13 /* LaunchScreen.storyboard in Resources */,
 				0424738329BA7E6E00B3FD13 /* Assets.xcassets in Resources */,
 				0424738129BA7E6D00B3FD13 /* Main.storyboard in Resources */,
@@ -198,7 +216,9 @@
 				0413A2BC29C24AD600034E44 /* HomeViewBrain.swift in Sources */,
 				0424739129BA927A00B3FD13 /* User.swift in Sources */,
 				0413A2C029C24C7500034E44 /* SignUpViewBrain.swift in Sources */,
+				042D439729CBA7EF000C3024 /* UserCell.swift in Sources */,
 				0424739529BA999200B3FD13 /* ForgotPasswordViewController.swift in Sources */,
+				042D439A29CBBAA9000C3024 /* NewProfileViewController.swift in Sources */,
 				0424737E29BA7E6D00B3FD13 /* LoginViewController.swift in Sources */,
 				0413A2C229C24D6700034E44 /* ProfileViewBrian.swift in Sources */,
 				0424737A29BA7E6D00B3FD13 /* AppDelegate.swift in Sources */,

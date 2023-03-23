@@ -9,8 +9,6 @@ import UIKit
 
 struct LoginViewBrain {
     
-    
-    
     func makeChanges(_ input: AnyObject) {
         input.layer?.cornerRadius = 10
         input.layer?.borderColor = UIColor.black.cgColor

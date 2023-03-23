@@ -9,8 +9,6 @@ import UIKit
 
 struct HomeViewBrain {
     
-    
-    
     func changeCornerRad(_ input: AnyObject){
         input.layer?.cornerRadius = 5
         input.layer?.shadowRadius = 1
@@ -22,5 +20,4 @@ struct HomeViewBrain {
         input.layer?.shadowRadius = 1
         input.layer?.shadowOpacity = 0.2
     }
-
 }

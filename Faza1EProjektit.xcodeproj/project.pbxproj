@@ -26,6 +26,10 @@
 		042D439829CBA7EF000C3024 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042D439629CBA7EF000C3024 /* UserCell.xib */; };
 		042D439A29CBBAA9000C3024 /* NewProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D439929CBBAA9000C3024 /* NewProfileViewController.swift */; };
 		04DCC82629BE18BB00DCD669 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCC82529BE18BB00DCD669 /* ProfileViewController.swift */; };
+		04E4F26629CE68FF00F3452D /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4F26429CE68FF00F3452D /* TrackCell.swift */; };
+		04E4F26729CE68FF00F3452D /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E4F26529CE68FF00F3452D /* TrackCell.xib */; };
+		04E4F26929CE710900F3452D /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4F26829CE710900F3452D /* Track.swift */; };
+		04E4F26D29CE724D00F3452D /* TrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4F26C29CE724D00F3452D /* TrackViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +54,10 @@
 		042D439629CBA7EF000C3024 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
 		042D439929CBBAA9000C3024 /* NewProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProfileViewController.swift; sourceTree = "<group>"; };
 		04DCC82529BE18BB00DCD669 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		04E4F26429CE68FF00F3452D /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
+		04E4F26529CE68FF00F3452D /* TrackCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackCell.xib; sourceTree = "<group>"; };
+		04E4F26829CE710900F3452D /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		04E4F26C29CE724D00F3452D /* TrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,11 +114,13 @@
 		0424738E29BA923F00B3FD13 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				042D439929CBBAA9000C3024 /* NewProfileViewController.swift */,
 				0424737D29BA7E6D00B3FD13 /* LoginViewController.swift */,
 				0424739229BA96BF00B3FD13 /* HomeViewController.swift */,
 				0424739429BA999200B3FD13 /* ForgotPasswordViewController.swift */,
 				0424739629BA99A600B3FD13 /* SignUpViewController.swift */,
 				04DCC82529BE18BB00DCD669 /* ProfileViewController.swift */,
+				04E4F26C29CE724D00F3452D /* TrackViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -118,13 +128,8 @@
 		0424738F29BA925000B3FD13 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0424739029BA927A00B3FD13 /* User.swift */,
-				0413A2B929C249F200034E44 /* LoginViewBrain.swift */,
-				0413A2BB29C24AD600034E44 /* HomeViewBrain.swift */,
-				0413A2BD29C24B9C00034E44 /* ForgotPassViewBrain.swift */,
-				0413A2BF29C24C7500034E44 /* SignUpViewBrain.swift */,
-				0413A2C129C24D6700034E44 /* ProfileViewBrian.swift */,
-				042D439929CBBAA9000C3024 /* NewProfileViewController.swift */,
+				04E4F26A29CE710E00F3452D /* Structures */,
+				04E4F26B29CE711C00F3452D /* ControllFiles */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -132,10 +137,49 @@
 		042D439429CBA7A9000C3024 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				04E4F26329CE68E100F3452D /* Track */,
+				04E4F26229CE68D800F3452D /* User */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		04E4F26229CE68D800F3452D /* User */ = {
+			isa = PBXGroup;
+			children = (
 				042D439529CBA7EF000C3024 /* UserCell.swift */,
 				042D439629CBA7EF000C3024 /* UserCell.xib */,
 			);
-			path = Cell;
+			path = User;
+			sourceTree = "<group>";
+		};
+		04E4F26329CE68E100F3452D /* Track */ = {
+			isa = PBXGroup;
+			children = (
+				04E4F26429CE68FF00F3452D /* TrackCell.swift */,
+				04E4F26529CE68FF00F3452D /* TrackCell.xib */,
+			);
+			path = Track;
+			sourceTree = "<group>";
+		};
+		04E4F26A29CE710E00F3452D /* Structures */ = {
+			isa = PBXGroup;
+			children = (
+				0424739029BA927A00B3FD13 /* User.swift */,
+				04E4F26829CE710900F3452D /* Track.swift */,
+			);
+			path = Structures;
+			sourceTree = "<group>";
+		};
+		04E4F26B29CE711C00F3452D /* ControllFiles */ = {
+			isa = PBXGroup;
+			children = (
+				0413A2B929C249F200034E44 /* LoginViewBrain.swift */,
+				0413A2BB29C24AD600034E44 /* HomeViewBrain.swift */,
+				0413A2BD29C24B9C00034E44 /* ForgotPassViewBrain.swift */,
+				0413A2BF29C24C7500034E44 /* SignUpViewBrain.swift */,
+				0413A2C129C24D6700034E44 /* ProfileViewBrian.swift */,
+			);
+			path = ControllFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +243,7 @@
 				042D439829CBA7EF000C3024 /* UserCell.xib in Resources */,
 				0424738629BA7E6E00B3FD13 /* LaunchScreen.storyboard in Resources */,
 				0424738329BA7E6E00B3FD13 /* Assets.xcassets in Resources */,
+				04E4F26729CE68FF00F3452D /* TrackCell.xib in Resources */,
 				0424738129BA7E6D00B3FD13 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,10 +265,13 @@
 				0424739529BA999200B3FD13 /* ForgotPasswordViewController.swift in Sources */,
 				042D439A29CBBAA9000C3024 /* NewProfileViewController.swift in Sources */,
 				0424737E29BA7E6D00B3FD13 /* LoginViewController.swift in Sources */,
+				04E4F26D29CE724D00F3452D /* TrackViewController.swift in Sources */,
 				0413A2C229C24D6700034E44 /* ProfileViewBrian.swift in Sources */,
 				0424737A29BA7E6D00B3FD13 /* AppDelegate.swift in Sources */,
+				04E4F26929CE710900F3452D /* Track.swift in Sources */,
 				0413A2BA29C249F200034E44 /* LoginViewBrain.swift in Sources */,
 				04DCC82629BE18BB00DCD669 /* ProfileViewController.swift in Sources */,
+				04E4F26629CE68FF00F3452D /* TrackCell.swift in Sources */,
 				0424737C29BA7E6D00B3FD13 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

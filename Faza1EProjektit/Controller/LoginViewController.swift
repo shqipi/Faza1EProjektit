@@ -9,8 +9,6 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    @IBOutlet weak var userNameWarningLabel: UILabel!
-    @IBOutlet weak var passwordWarningLabel: UILabel!
     
     var user: User?
     var isClicked = true
@@ -28,8 +26,16 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setUpTextFieldDelegate()
+        setUpDisplay()
+    }
+    
+    func setUpTextFieldDelegate() {
         usernameTextField.delegate = self
         passwordTextField.delegate = self
+    }
+    
+    func setUpDisplay() {
         loginViewBrain.makeChanges(backgroundView)
         loginViewBrain.makeChanges(loginButton)
         loginViewBrain.txtFieldShadow(usernameTextField)
@@ -50,24 +56,14 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
-        guard let username = usernameTextField.text, let password = passwordTextField.text else {
-            return
-        }
-        if username != "", password != ""{
-            performSegue(withIdentifier: "go2Home", sender: self)
-            userNameWarningLabel.isHidden = true
-            passwordWarningLabel.isHidden = true
-        }else {
-            userNameWarningLabel.isHidden = false
-            userNameWarningLabel.text = "UserName is empty"
-            passwordWarningLabel.isHidden = false
-            passwordWarningLabel.text = "Password is empty"
-            return
-        }
+//        let storyBoard = UIStoryboard(name: K.main, bundle: nil)
+//        let mainTabBardController = storyBoard.instantiateViewController(withIdentifier: K.identifierOfMainTbC)
+//        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(mainTabBardController)
+        self.performSegue(withIdentifier: K.segueIdentifier.segueGo2Home, sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "go2Home" {
+        if segue.identifier == K.segueIdentifier.segueGo2Home {
             if let homeViewController = segue.destination as? HomeViewController{
                 let user = User(userName: usernameTextField.text ?? "Feed", id: 1)
                 homeViewController.showUsername = user.userName ?? "Shqiperim"

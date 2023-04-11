@@ -16,9 +16,6 @@ class ForgotPasswordViewController: UIViewController {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var newPassTextField: UITextField!
     @IBOutlet weak var reTypePassTextField: UITextField!
-    @IBOutlet weak var userNameWarningLabel: UILabel!
-    @IBOutlet weak var passwordWarningLabel: UILabel!
-    @IBOutlet weak var reTypePassWarningLabel: UILabel!
     @IBOutlet weak var changeButton: UIButton!
     
     var forgotPassViewBrain = ForgotPassViewBrain()
@@ -27,9 +24,27 @@ class ForgotPasswordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setUpDisplay()
+        setUpDelegate()
+        adjustDisplayView()
+    }
+    
+    func setUpDelegate() {
         userNameTextField.delegate = self
         newPassTextField.delegate = self
         reTypePassTextField.delegate = self
+        
+    }
+    
+    func adjustDisplayView() {
+        mainView.layer.cornerRadius = 10
+        mainView.layer.borderColor = UIColor.black.cgColor
+        mainView.layer.borderWidth = 2
+        mainView.layer.shadowRadius = 10
+        mainView.layer.shadowOpacity = 0.2
+    }
+    
+    func setUpDisplay() {
         forgotPassViewBrain.changeCornerRad(mainView)
         forgotPassViewBrain.changeCornerRad(changeButton)
         forgotPassViewBrain.addShadow(mainView)
@@ -63,27 +78,10 @@ class ForgotPasswordViewController: UIViewController {
     
     
     @IBAction func changeButtonPressed(_ sender: UIButton) {
-        
-        guard let name = userNameTextField.text, let password = newPassTextField.text, let retPassword = reTypePassTextField.text else {
-            return
-        }
-        
-        if name != "", password != "", retPassword != "" {
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            if let goToProfileViewController = storyBoard.instantiateViewController(withIdentifier: "ProfileViewController") as? ProfileViewController {
-                goToProfileViewController.firstLabel = "Changed succsessfully"
-                self.navigationController?.pushViewController(goToProfileViewController, animated: true)
-            }
-            userNameWarningLabel.isHidden = true
-            passwordWarningLabel.isHidden = true
-            reTypePassWarningLabel.isHidden = true
-        }else {
-            userNameWarningLabel.isHidden = false
-            userNameWarningLabel.text = "User name is empty"
-            passwordWarningLabel.isHidden = false
-            passwordWarningLabel.text = "Password is empty"
-            reTypePassWarningLabel.isHidden = false
-            reTypePassWarningLabel.text = "Re-Type password is empty"
+        let storyBoard = UIStoryboard(name: K.main, bundle: nil)
+        if let goToProfileViewController = storyBoard.instantiateViewController(withIdentifier: K.identifierOfProfileVC) as? ProfileViewController {
+            goToProfileViewController.firstLabel = "Changed succsessfully"
+            self.navigationController?.pushViewController(goToProfileViewController, animated: true)
         }
     }
 }

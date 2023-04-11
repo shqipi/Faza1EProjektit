@@ -34,7 +34,7 @@ class NewProfileViewController: UIViewController, UITableViewDelegate, UITableVi
     func setUpTableView(){
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(UINib(nibName: "UserCell", bundle: nil), forCellReuseIdentifier: "UserCell")
+        tableView.register(UINib(nibName: K.uiNibeNames.userCellNibName, bundle: nil), forCellReuseIdentifier: K.cellResudeIdentifierName.userCellIdentifierName)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -46,7 +46,7 @@ class NewProfileViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell") as! UserCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.cellResudeIdentifierName.userCellIdentifierName) as! UserCell
         cell.setDetaisl(user: userArray[indexPath.row])
         return cell
     }

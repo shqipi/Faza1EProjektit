@@ -12,6 +12,8 @@ class SignUpViewController: UIViewController {
     var user: User?
     var isClicked = true
     
+    
+    @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var fullNameTextField: UITextField!
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -38,6 +40,21 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setUpTextFieldDelegate()
+        setUpHowItemsLook()
+        changeArrayViews()
+        adjustDisplayView()
+    }
+    
+    func adjustDisplayView() {
+        mainView.layer.cornerRadius = 10
+        mainView.layer.borderColor = UIColor.black.cgColor
+        mainView.layer.borderWidth = 2
+        mainView.layer.shadowRadius = 10
+        mainView.layer.shadowOpacity = 0.2
+    }
+    
+    func setUpTextFieldDelegate() {
         fullNameTextField.delegate = self
         userNameTextField.delegate = self
         passwordTextField.delegate = self
@@ -45,9 +62,11 @@ class SignUpViewController: UIViewController {
         cityTextField.delegate = self
         countryTextField.delegate = self
         ageTextField.delegate = self
+    }
+    
+    func setUpHowItemsLook() {
         signUpViewBrain.changeBorder(mainViewField)
         signUpViewBrain.buttonChange(signInButton)
-        changeArrayViews()
     }
     
     @IBAction func eyeButtonPressed(_ sender: UIButton) {
@@ -74,8 +93,8 @@ class SignUpViewController: UIViewController {
             return
         }
         if user != "", name != "", password != "", reTypePass != "", city != "", country != "", age != ""{
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            if let profileViewController = storyBoard.instantiateViewController(withIdentifier: "ProfileViewController") as? ProfileViewController {
+            let storyBoard = UIStoryboard(name: K.main, bundle: nil)
+            if let profileViewController = storyBoard.instantiateViewController(withIdentifier: K.identifierOfProfileVC) as? ProfileViewController {
                 let userObj = User(userName: (userNameTextField.text ?? "hello"), fullName: (userNameTextField.text ?? "hello"), city: (cityTextField.text ?? "hello"), country: (countryTextField.text ?? "hello"), age: Int (ageTextField.text ?? "0"), id: 1)
                 profileViewController.name = userObj.fullName ?? "Hello"
                 profileViewController.userName = userObj.userName ?? "Shqiperim"

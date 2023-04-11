@@ -43,7 +43,6 @@ class UserCell: UITableViewCell {
     }
     
     func changeCornerRad(_ input: AnyObject){
-        input.layer?.cornerRadius = 10
         input.layer?.shadowRadius = 1
         input.layer?.shadowOpacity = 0.2
         input.layer?.shadowOffset = CGSize(width: 0, height: 3)

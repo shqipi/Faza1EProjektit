@@ -14,6 +14,7 @@ class TrackCell: UITableViewCell {
     @IBOutlet weak var startPointLabel: UILabel!
     @IBOutlet weak var finishPointLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var startTrailButton: UIButton!
     @IBOutlet weak var trackImageLabel: UIImageView!
     
     override func awakeFromNib() {
@@ -24,7 +25,18 @@ class TrackCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+        setButton()
+        setImage()
+    }
+    
+    func setButton() {
+        startTrailButton.layer.cornerRadius = 5
+        startTrailButton.layer.borderWidth = 1
+        startTrailButton.layer.borderColor = UIColor.black.cgColor
+    }
+    
+    func setImage() {
+        trackImageLabel.layer.cornerRadius = 5
     }
     
     
@@ -35,5 +47,9 @@ class TrackCell: UITableViewCell {
         finishPointLabel.text = track.finishPoint
         distanceLabel.text = "\(track.distance ?? 0) Km"
         trackImageLabel.image = UIImage(named: track.image ?? "1")
+    }
+    
+    
+    @IBAction func startTrailButtonPressed(_ sender: Any) {
     }
 }

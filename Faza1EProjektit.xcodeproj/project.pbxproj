@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040E155629E574A000596DDC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040E155529E574A000596DDC /* Constants.swift */; };
 		0413A2BA29C249F200034E44 /* LoginViewBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0413A2B929C249F200034E44 /* LoginViewBrain.swift */; };
 		0413A2BC29C24AD600034E44 /* HomeViewBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0413A2BB29C24AD600034E44 /* HomeViewBrain.swift */; };
 		0413A2BE29C24B9C00034E44 /* ForgotPassViewBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0413A2BD29C24B9C00034E44 /* ForgotPassViewBrain.swift */; };
@@ -30,9 +31,11 @@
 		04E4F26729CE68FF00F3452D /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E4F26529CE68FF00F3452D /* TrackCell.xib */; };
 		04E4F26929CE710900F3452D /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4F26829CE710900F3452D /* Track.swift */; };
 		04E4F26D29CE724D00F3452D /* TrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4F26C29CE724D00F3452D /* TrackViewController.swift */; };
+		04F5AC7929E2F26400E0076F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5AC7829E2F26400E0076F /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040E155529E574A000596DDC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0413A2B929C249F200034E44 /* LoginViewBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewBrain.swift; sourceTree = "<group>"; };
 		0413A2BB29C24AD600034E44 /* HomeViewBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewBrain.swift; sourceTree = "<group>"; };
 		0413A2BD29C24B9C00034E44 /* ForgotPassViewBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassViewBrain.swift; sourceTree = "<group>"; };
@@ -58,6 +61,7 @@
 		04E4F26529CE68FF00F3452D /* TrackCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackCell.xib; sourceTree = "<group>"; };
 		04E4F26829CE710900F3452D /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		04E4F26C29CE724D00F3452D /* TrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewController.swift; sourceTree = "<group>"; };
+		04F5AC7829E2F26400E0076F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 				0424738E29BA923F00B3FD13 /* Controller */,
 				0424738229BA7E6E00B3FD13 /* Assets.xcassets */,
 				0424738729BA7E6E00B3FD13 /* Info.plist */,
+				040E155529E574A000596DDC /* Constants.swift */,
 			);
 			path = Faza1EProjektit;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 				0424739629BA99A600B3FD13 /* SignUpViewController.swift */,
 				04DCC82529BE18BB00DCD669 /* ProfileViewController.swift */,
 				04E4F26C29CE724D00F3452D /* TrackViewController.swift */,
+				04F5AC7829E2F26400E0076F /* MapViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -262,6 +268,7 @@
 				0424739129BA927A00B3FD13 /* User.swift in Sources */,
 				0413A2C029C24C7500034E44 /* SignUpViewBrain.swift in Sources */,
 				042D439729CBA7EF000C3024 /* UserCell.swift in Sources */,
+				04F5AC7929E2F26400E0076F /* MapViewController.swift in Sources */,
 				0424739529BA999200B3FD13 /* ForgotPasswordViewController.swift in Sources */,
 				042D439A29CBBAA9000C3024 /* NewProfileViewController.swift in Sources */,
 				0424737E29BA7E6D00B3FD13 /* LoginViewController.swift in Sources */,
@@ -269,6 +276,7 @@
 				0413A2C229C24D6700034E44 /* ProfileViewBrian.swift in Sources */,
 				0424737A29BA7E6D00B3FD13 /* AppDelegate.swift in Sources */,
 				04E4F26929CE710900F3452D /* Track.swift in Sources */,
+				040E155629E574A000596DDC /* Constants.swift in Sources */,
 				0413A2BA29C249F200034E44 /* LoginViewBrain.swift in Sources */,
 				04DCC82629BE18BB00DCD669 /* ProfileViewController.swift in Sources */,
 				04E4F26629CE68FF00F3452D /* TrackCell.swift in Sources */,

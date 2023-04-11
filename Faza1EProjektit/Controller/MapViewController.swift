@@ -11,10 +11,14 @@ import MapKit
 class MapViewController: UIViewController, MKMapViewDelegate{
     
     @IBOutlet weak var mapView: MKMapView!
-    
     @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var footerView: UIView!
+    @IBOutlet weak var toggleButtonView: UIButton!
     
+    let loacationManager = CLLocationManager()
     var tracksArrey: [MKPointAnnotation] = []
+    
+    var isShowing: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,10 +27,43 @@ class MapViewController: UIViewController, MKMapViewDelegate{
         self.mapView.addAnnotations(self.tracksArrey)
         self.mapView.showAnnotations(self.tracksArrey, animated: true)
         self.mapView.delegate = self
+        showFooterView()
+//        hideFooterView()
+        
+//        loacationManager.delegate = self
+//        loacationManager.requestWhenInUseAuthorization()
+//        loacationManager.requestLocation()
     }
     
     
     @IBAction func locationButtonPressed(_ sender: UIButton) {
+//        loacationManager.requestLocation()
+    }
+    
+    @IBAction func toggleButtonPressed(_ sender: Any) {
+        UIView.animate(withDuration: 0.6) {
+            if self.isShowing {
+                self.hideFooterView()
+                self.toggleButtonView.setImage(UIImage(systemName: "chevron.up"), for: .normal)
+                self.isShowing = false
+            }else {
+                self.showFooterView()
+                self.toggleButtonView.setImage(UIImage(systemName: "chevron.down"), for: .normal)
+                self.isShowing = true
+            }
+        }
+    }
+    
+    func showFooterView() {
+        let footerHeight = 130
+        footerView.frame = CGRect(x: 0, y: Int(view.frame.height) - footerHeight, width: Int(self.view.frame.width), height: footerHeight)
+        view.addSubview(footerView)
+    }
+    
+    func hideFooterView() {
+        let footerHeight = 40
+        footerView.frame = CGRect(x: 0, y: Int(view.frame.height) - footerHeight, width: Int(self.view.frame.width), height: footerHeight)
+//        view.addSubview(footerView)
     }
     
     func createTracks(_ n: Int) {
@@ -77,9 +114,22 @@ class MapViewController: UIViewController, MKMapViewDelegate{
     }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
-        let storyBoard = UIStoryboard(name: K.main, bundle: nil)
-        if let trackViewController = storyBoard.instantiateViewController(identifier: K.identifierOfTrackVC) as? TrackViewController {
-            (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(trackViewController)
-        }
+        dismiss(animated: true)
     }
 }
+
+
+//extension MapViewController: CLLocationManagerDelegate {
+    
+//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//        if let location = locations.last {
+//            loacationManager.stopUpdatingLocation()
+////            let lat = location.coordinate.latitude
+////            let lon = location.coordinate.longitude
+//        }
+//    }
+    
+//    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+//        print(error)
+//    }
+//}

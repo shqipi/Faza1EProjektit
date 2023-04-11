@@ -71,21 +71,23 @@ extension TrackViewController: UITableViewDataSource {
     @objc func handleButtonClick(_ sender: UIButton) {
         let currentNumber = sender.tag
         let storyBoard = UIStoryboard(name: K.main, bundle: nil)
-        if let trackViewController = storyBoard.instantiateViewController(withIdentifier: K.identifierOfMapVC) as? MapViewController {
+        if let mapViewController = storyBoard.instantiateViewController(withIdentifier: K.identifierOfMapVC) as? MapViewController {
             if currentNumber == 0 {
-                trackViewController.createTracks(currentNumber)
+                mapViewController.createTracks(currentNumber)
             } else if currentNumber == 1 {
-                trackViewController.createTracks(currentNumber)
+                mapViewController.createTracks(currentNumber)
             }else if currentNumber == 2 {
-                trackViewController.createTracks(currentNumber)
+                mapViewController.createTracks(currentNumber)
             }else if currentNumber == 3 {
-                trackViewController.createTracks(currentNumber)
+                mapViewController.createTracks(currentNumber)
             }else if currentNumber == 4 {
-                trackViewController.createTracks(currentNumber)
+                mapViewController.createTracks(currentNumber)
             }else if currentNumber == 5{
-                trackViewController.createTracks(currentNumber)
+                mapViewController.createTracks(currentNumber)
             }
-            (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(trackViewController)
+//            (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(trackViewController)
+            mapViewController.modalPresentationStyle = .fullScreen 
+            present(mapViewController, animated: true, completion: nil)
         }
     }
 }

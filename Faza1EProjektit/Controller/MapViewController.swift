@@ -7,16 +7,26 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 class MapViewController: UIViewController, MKMapViewDelegate{
+   
+    
+    
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var footerView: UIView!
     @IBOutlet weak var toggleButtonView: UIButton!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var iconImage: UIImageView!
+    @IBOutlet weak var tempLabel: UILabel!
+    
+    
+    var tracksArrey: [MKPointAnnotation] = []
     
     let loacationManager = CLLocationManager()
-    var tracksArrey: [MKPointAnnotation] = []
+    var weatherManager = WeatherManager()
     
     var isShowing: Bool = true
     
@@ -28,16 +38,17 @@ class MapViewController: UIViewController, MKMapViewDelegate{
         self.mapView.showAnnotations(self.tracksArrey, animated: true)
         self.mapView.delegate = self
         showFooterView()
-//        hideFooterView()
         
-//        loacationManager.delegate = self
-//        loacationManager.requestWhenInUseAuthorization()
-//        loacationManager.requestLocation()
+        weatherManager.delegate = self
+        
+        loacationManager.delegate = self
+        loacationManager.requestWhenInUseAuthorization()
+        loacationManager.requestLocation()
     }
     
     
     @IBAction func locationButtonPressed(_ sender: UIButton) {
-//        loacationManager.requestLocation()
+        loacationManager.requestLocation()
     }
     
     @IBAction func toggleButtonPressed(_ sender: Any) {
@@ -119,17 +130,30 @@ class MapViewController: UIViewController, MKMapViewDelegate{
 }
 
 
-//extension MapViewController: CLLocationManagerDelegate {
+extension MapViewController: CLLocationManagerDelegate, WeatherManagerDelegate {
+    func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel) {
+        DispatchQueue.main.async {
+            self.locationLabel.text = weather.cityName
+            self.iconImage.image = UIImage(systemName: weather.conditionName)
+            self.tempLabel.text = "\(weather.temperature) °C"
+        }
+    }
     
-//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        if let location = locations.last {
-//            loacationManager.stopUpdatingLocation()
-////            let lat = location.coordinate.latitude
-////            let lon = location.coordinate.longitude
-//        }
-//    }
+    func didFailWithError(error: Error) {
+        print(error)
+    }
     
-//    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-//        print(error)
-//    }
-//}
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last {
+            loacationManager.stopUpdatingLocation()
+            let lat = location.coordinate.latitude
+            let lon = location.coordinate.longitude
+            weatherManager.fetchWeather(latitude: lat, longitude: lon)
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+    }
+}

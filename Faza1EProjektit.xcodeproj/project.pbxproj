@@ -23,6 +23,9 @@
 		0424739329BA96BF00B3FD13 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424739229BA96BF00B3FD13 /* HomeViewController.swift */; };
 		0424739529BA999200B3FD13 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424739429BA999200B3FD13 /* ForgotPasswordViewController.swift */; };
 		0424739729BA99A600B3FD13 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424739629BA99A600B3FD13 /* SignUpViewController.swift */; };
+		0426BB3429E5EF2200CEAE35 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0426BB3329E5EF2200CEAE35 /* WeatherManager.swift */; };
+		0426BB3629E5F20900CEAE35 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0426BB3529E5F20900CEAE35 /* WeatherModel.swift */; };
+		0426BB3829E5F70500CEAE35 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0426BB3729E5F70500CEAE35 /* WeatherData.swift */; };
 		042D439729CBA7EF000C3024 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D439529CBA7EF000C3024 /* UserCell.swift */; };
 		042D439829CBA7EF000C3024 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042D439629CBA7EF000C3024 /* UserCell.xib */; };
 		042D439A29CBBAA9000C3024 /* NewProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D439929CBBAA9000C3024 /* NewProfileViewController.swift */; };
@@ -53,6 +56,9 @@
 		0424739229BA96BF00B3FD13 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0424739429BA999200B3FD13 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		0424739629BA99A600B3FD13 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		0426BB3329E5EF2200CEAE35 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
+		0426BB3529E5F20900CEAE35 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		0426BB3729E5F70500CEAE35 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		042D439529CBA7EF000C3024 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		042D439629CBA7EF000C3024 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
 		042D439929CBBAA9000C3024 /* NewProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProfileViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +178,9 @@
 			children = (
 				0424739029BA927A00B3FD13 /* User.swift */,
 				04E4F26829CE710900F3452D /* Track.swift */,
+				0426BB3329E5EF2200CEAE35 /* WeatherManager.swift */,
+				0426BB3529E5F20900CEAE35 /* WeatherModel.swift */,
+				0426BB3729E5F70500CEAE35 /* WeatherData.swift */,
 			);
 			path = Structures;
 			sourceTree = "<group>";
@@ -269,8 +278,11 @@
 				0413A2C029C24C7500034E44 /* SignUpViewBrain.swift in Sources */,
 				042D439729CBA7EF000C3024 /* UserCell.swift in Sources */,
 				04F5AC7929E2F26400E0076F /* MapViewController.swift in Sources */,
+				0426BB3429E5EF2200CEAE35 /* WeatherManager.swift in Sources */,
 				0424739529BA999200B3FD13 /* ForgotPasswordViewController.swift in Sources */,
+				0426BB3629E5F20900CEAE35 /* WeatherModel.swift in Sources */,
 				042D439A29CBBAA9000C3024 /* NewProfileViewController.swift in Sources */,
+				0426BB3829E5F70500CEAE35 /* WeatherData.swift in Sources */,
 				0424737E29BA7E6D00B3FD13 /* LoginViewController.swift in Sources */,
 				04E4F26D29CE724D00F3452D /* TrackViewController.swift in Sources */,
 				0413A2C229C24D6700034E44 /* ProfileViewBrian.swift in Sources */,

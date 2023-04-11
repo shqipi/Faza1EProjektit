@@ -449,7 +449,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
-                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NRV-Ys-VA8">
+                            <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NRV-Ys-VA8">
                                 <rect key="frame" x="5" y="60" width="120" height="120"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="acH-iV-Uvu">
@@ -519,8 +519,11 @@
                     <navigationItem key="navigationItem" id="Tgx-NG-jlI"/>
                     <connections>
                         <outlet property="footerView" destination="OSh-11-Lm8" id="Owd-D1-HW4"/>
+                        <outlet property="iconImage" destination="acH-iV-Uvu" id="vpT-Uq-QjB"/>
+                        <outlet property="locationLabel" destination="tGw-77-Ghf" id="n8n-xh-X55"/>
                         <outlet property="mapView" destination="ngl-ma-6Dc" id="lMi-Nm-TbB"/>
                         <outlet property="startButton" destination="sZV-RY-e3j" id="UGi-bI-BGU"/>
+                        <outlet property="tempLabel" destination="9H5-98-xf2" id="C5Y-rU-HEP"/>
                         <outlet property="toggleButtonView" destination="WxS-2D-umh" id="MDf-qC-IBH"/>
                     </connections>
                 </viewController>

@@ -13,6 +13,7 @@ struct K {
     static let identifierOfMainTbC = "MainTabBarController"
     static let identifierOfMapVC = "MapViewController"
     static let identifierOfTrackVC = "TrackViewController"
+    static let identifierOfWebVC = "WebViewController"
     
     struct segueIdentifier {
         static let segueGo2Home = "go2Home"

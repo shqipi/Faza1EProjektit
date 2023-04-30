@@ -29,12 +29,15 @@
 		042D439729CBA7EF000C3024 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D439529CBA7EF000C3024 /* UserCell.swift */; };
 		042D439829CBA7EF000C3024 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042D439629CBA7EF000C3024 /* UserCell.xib */; };
 		042D439A29CBBAA9000C3024 /* NewProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D439929CBBAA9000C3024 /* NewProfileViewController.swift */; };
+		04A134E029F8853E009B09C4 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A134DF29F8853E009B09C4 /* Page.swift */; };
+		04A34A5F29F930C500A7A654 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A34A5E29F930C500A7A654 /* WebViewController.swift */; };
 		04DCC82629BE18BB00DCD669 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCC82529BE18BB00DCD669 /* ProfileViewController.swift */; };
 		04E4F26629CE68FF00F3452D /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4F26429CE68FF00F3452D /* TrackCell.swift */; };
 		04E4F26729CE68FF00F3452D /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E4F26529CE68FF00F3452D /* TrackCell.xib */; };
 		04E4F26929CE710900F3452D /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4F26829CE710900F3452D /* Track.swift */; };
 		04E4F26D29CE724D00F3452D /* TrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4F26C29CE724D00F3452D /* TrackViewController.swift */; };
 		04F5AC7929E2F26400E0076F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5AC7829E2F26400E0076F /* MapViewController.swift */; };
+		71E9D1DC763DDA5969CEC07C /* Pods_Faza1EProjektit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F666D0B0CFF2BCBDA25D5C /* Pods_Faza1EProjektit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,12 +65,17 @@
 		042D439529CBA7EF000C3024 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		042D439629CBA7EF000C3024 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
 		042D439929CBBAA9000C3024 /* NewProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProfileViewController.swift; sourceTree = "<group>"; };
+		04A134DF29F8853E009B09C4 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		04A34A5E29F930C500A7A654 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		04DCC82529BE18BB00DCD669 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		04E4F26429CE68FF00F3452D /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
 		04E4F26529CE68FF00F3452D /* TrackCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackCell.xib; sourceTree = "<group>"; };
 		04E4F26829CE710900F3452D /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		04E4F26C29CE724D00F3452D /* TrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewController.swift; sourceTree = "<group>"; };
 		04F5AC7829E2F26400E0076F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		18F666D0B0CFF2BCBDA25D5C /* Pods_Faza1EProjektit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Faza1EProjektit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EA13C97AB2ADDBF56D7A6B1 /* Pods-Faza1EProjektit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Faza1EProjektit.debug.xcconfig"; path = "Target Support Files/Pods-Faza1EProjektit/Pods-Faza1EProjektit.debug.xcconfig"; sourceTree = "<group>"; };
+		F45BC9ECE97193FD8DD9AF70 /* Pods-Faza1EProjektit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Faza1EProjektit.release.xcconfig"; path = "Target Support Files/Pods-Faza1EProjektit/Pods-Faza1EProjektit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71E9D1DC763DDA5969CEC07C /* Pods_Faza1EProjektit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +95,8 @@
 			children = (
 				0424737829BA7E6D00B3FD13 /* Faza1EProjektit */,
 				0424737729BA7E6D00B3FD13 /* Products */,
+				D056425586F479CF867466AD /* Pods */,
+				BB945C3F3D4070A495C29DAD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,6 +144,7 @@
 				04DCC82529BE18BB00DCD669 /* ProfileViewController.swift */,
 				04E4F26C29CE724D00F3452D /* TrackViewController.swift */,
 				04F5AC7829E2F26400E0076F /* MapViewController.swift */,
+				04A34A5E29F930C500A7A654 /* WebViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -142,6 +154,7 @@
 			children = (
 				04E4F26A29CE710E00F3452D /* Structures */,
 				04E4F26B29CE711C00F3452D /* ControllFiles */,
+				04A134DF29F8853E009B09C4 /* Page.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -197,6 +210,24 @@
 			path = ControllFiles;
 			sourceTree = "<group>";
 		};
+		BB945C3F3D4070A495C29DAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18F666D0B0CFF2BCBDA25D5C /* Pods_Faza1EProjektit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D056425586F479CF867466AD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2EA13C97AB2ADDBF56D7A6B1 /* Pods-Faza1EProjektit.debug.xcconfig */,
+				F45BC9ECE97193FD8DD9AF70 /* Pods-Faza1EProjektit.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -204,9 +235,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0424738A29BA7E6E00B3FD13 /* Build configuration list for PBXNativeTarget "Faza1EProjektit" */;
 			buildPhases = (
+				216E869485B3F84EC84547BA /* [CP] Check Pods Manifest.lock */,
 				0424737229BA7E6D00B3FD13 /* Sources */,
 				0424737329BA7E6D00B3FD13 /* Frameworks */,
 				0424737429BA7E6D00B3FD13 /* Resources */,
+				DD36B24B8E1537819ED1435A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -265,6 +298,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		216E869485B3F84EC84547BA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Faza1EProjektit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD36B24B8E1537819ED1435A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Faza1EProjektit/Pods-Faza1EProjektit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Faza1EProjektit/Pods-Faza1EProjektit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Faza1EProjektit/Pods-Faza1EProjektit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0424737229BA7E6D00B3FD13 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -272,6 +347,7 @@
 			files = (
 				0413A2BE29C24B9C00034E44 /* ForgotPassViewBrain.swift in Sources */,
 				0424739329BA96BF00B3FD13 /* HomeViewController.swift in Sources */,
+				04A134E029F8853E009B09C4 /* Page.swift in Sources */,
 				0424739729BA99A600B3FD13 /* SignUpViewController.swift in Sources */,
 				0413A2BC29C24AD600034E44 /* HomeViewBrain.swift in Sources */,
 				0424739129BA927A00B3FD13 /* User.swift in Sources */,
@@ -282,6 +358,7 @@
 				0424739529BA999200B3FD13 /* ForgotPasswordViewController.swift in Sources */,
 				0426BB3629E5F20900CEAE35 /* WeatherModel.swift in Sources */,
 				042D439A29CBBAA9000C3024 /* NewProfileViewController.swift in Sources */,
+				04A34A5F29F930C500A7A654 /* WebViewController.swift in Sources */,
 				0426BB3829E5F70500CEAE35 /* WeatherData.swift in Sources */,
 				0424737E29BA7E6D00B3FD13 /* LoginViewController.swift in Sources */,
 				04E4F26D29CE724D00F3452D /* TrackViewController.swift in Sources */,
@@ -434,6 +511,7 @@
 		};
 		0424738B29BA7E6E00B3FD13 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EA13C97AB2ADDBF56D7A6B1 /* Pods-Faza1EProjektit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -463,6 +541,7 @@
 		};
 		0424738C29BA7E6E00B3FD13 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F45BC9ECE97193FD8DD9AF70 /* Pods-Faza1EProjektit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

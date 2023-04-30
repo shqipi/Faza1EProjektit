@@ -1,0 +1,6 @@
+framework module Pods_Faza1EProjektit {
+  umbrella header "Pods-Faza1EProjektit-umbrella.h"
+
+  export *
+  module * { export * }
+}

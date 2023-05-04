@@ -31,6 +31,7 @@
 		042D439A29CBBAA9000C3024 /* NewProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D439929CBBAA9000C3024 /* NewProfileViewController.swift */; };
 		04A134E029F8853E009B09C4 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A134DF29F8853E009B09C4 /* Page.swift */; };
 		04A34A5F29F930C500A7A654 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A34A5E29F930C500A7A654 /* WebViewController.swift */; };
+		04B17B1E2A0472BF003E8860 /* Faza1EProjektit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04B17B1C2A0472BF003E8860 /* Faza1EProjektit.xcdatamodeld */; };
 		04DCC82629BE18BB00DCD669 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCC82529BE18BB00DCD669 /* ProfileViewController.swift */; };
 		04E4F26629CE68FF00F3452D /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4F26429CE68FF00F3452D /* TrackCell.swift */; };
 		04E4F26729CE68FF00F3452D /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E4F26529CE68FF00F3452D /* TrackCell.xib */; };
@@ -67,6 +68,7 @@
 		042D439929CBBAA9000C3024 /* NewProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProfileViewController.swift; sourceTree = "<group>"; };
 		04A134DF29F8853E009B09C4 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		04A34A5E29F930C500A7A654 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		04B17B1D2A0472BF003E8860 /* Faza1EProjektit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Faza1EProjektit.xcdatamodel; sourceTree = "<group>"; };
 		04DCC82529BE18BB00DCD669 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		04E4F26429CE68FF00F3452D /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
 		04E4F26529CE68FF00F3452D /* TrackCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackCell.xib; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				0424738E29BA923F00B3FD13 /* Controller */,
 				0424738229BA7E6E00B3FD13 /* Assets.xcassets */,
 				0424738729BA7E6E00B3FD13 /* Info.plist */,
+				04B17B1C2A0472BF003E8860 /* Faza1EProjektit.xcdatamodeld */,
 				040E155529E574A000596DDC /* Constants.swift */,
 			);
 			path = Faza1EProjektit;
@@ -224,7 +227,6 @@
 				2EA13C97AB2ADDBF56D7A6B1 /* Pods-Faza1EProjektit.debug.xcconfig */,
 				F45BC9ECE97193FD8DD9AF70 /* Pods-Faza1EProjektit.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -347,6 +349,7 @@
 			files = (
 				0413A2BE29C24B9C00034E44 /* ForgotPassViewBrain.swift in Sources */,
 				0424739329BA96BF00B3FD13 /* HomeViewController.swift in Sources */,
+				04B17B1E2A0472BF003E8860 /* Faza1EProjektit.xcdatamodeld in Sources */,
 				04A134E029F8853E009B09C4 /* Page.swift in Sources */,
 				0424739729BA99A600B3FD13 /* SignUpViewController.swift in Sources */,
 				0413A2BC29C24AD600034E44 /* HomeViewBrain.swift in Sources */,
@@ -591,6 +594,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		04B17B1C2A0472BF003E8860 /* Faza1EProjektit.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				04B17B1D2A0472BF003E8860 /* Faza1EProjektit.xcdatamodel */,
+			);
+			currentVersion = 04B17B1D2A0472BF003E8860 /* Faza1EProjektit.xcdatamodel */;
+			path = Faza1EProjektit.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0424736E29BA7E6D00B3FD13 /* Project object */;
 }

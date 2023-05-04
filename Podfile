@@ -7,4 +7,5 @@ target 'Faza1EProjektit' do
 
   # Pods for Faza1EProjektit
 	pod 'NVActivityIndicatorView'
+  pod 'TextFieldEffects'
 end

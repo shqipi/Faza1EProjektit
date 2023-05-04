@@ -6,7 +6,9 @@
 //
 
 import UIKit
-
+protocol TapGestureRecognizerToImag{
+    func tapImage(track: Track)
+}
 class TrackCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
@@ -17,17 +19,33 @@ class TrackCell: UITableViewCell {
     @IBOutlet weak var startTrailButton: UIButton!
     @IBOutlet weak var trackImageLabel: UIImageView!
     
+    var delegate: TapGestureRecognizerToImag?
+    var track: Track?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         setButton()
         setImage()
     }
+    
+    func handleTap() {
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        trackImageLabel.isUserInteractionEnabled = true
+        trackImageLabel.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        if let track = track {
+            delegate?.tapImage(track: track)
+        }
+    }
+   
     
     func setButton() {
         startTrailButton.layer.cornerRadius = 5

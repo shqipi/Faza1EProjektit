@@ -27,6 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //            let loginNavController = storyBoard.instantiateViewController(identifier: "LoginNavigationController")
 //            window?.rootViewController = loginNavController
 //        }
+        guard let _ = (scene as? UIWindowScene) else { return }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -57,12 +58,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
-    func changeRootViewController(_ vc: UIViewController, animated: Bool = true) {
-        guard let window = self.window else {
-            return
-        }
-        window.rootViewController = vc
-    }
+
 
 }
 
